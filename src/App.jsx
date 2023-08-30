@@ -19,6 +19,7 @@ function App() {
     try {
       const res = await axios.get("https://catfact.ninja/fact?max_length=140");
       setData(res.data);
+      console.log(res.data);
     } catch (error) {
       setIsError(error.message);
     }
@@ -26,14 +27,20 @@ function App() {
 
   useEffect(() => {
     getApiData();
-  });
+    const interval = setInterval(getApiData, 10000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <>
-      <h1 className="heading mt-20">About axios</h1>
-      {isError !== "" && <h2>{isError}</h2>}
-
-      <h1>{myData.fact}</h1>
+      <h1 className="heading mt-20">My Facts-Your Cuteheart 😍</h1>
+      {/* {isError !== "" && <h2>{isError}</h2>} */}
+      <div className="facts">
+        <h1 className="head-fact">{myData.fact}</h1>
+      </div>
     </>
   );
 }
