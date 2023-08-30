@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./images/cat6.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    height: 100vh;
+    animation: change 10s infinite ease-in-out;
+}
+
+@keyframes change {
+    0% {
+        background-image: url('./images/cat1.avif');
+    }
+
+    20% {
+        background-image: url('./images/cat2.avif');
+    }
+
+    40% {
+        background-image: url('./images/cat3.avif');
+    }
+
+    60% {
+        background-image: url('./images/cat4.avif');
+    }
+
+    80% {
+        background-image: url('./images/cat5.avif');
+    }
+
+    100% {
+        background-image: url('./images/cat6.avif');
+    }
+
+}
+
+
+/* .grid-system {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    /* background-color: #2196F3; */
+/* row-gap: 1.4rem;
+    position: relative;
+    column-gap: 0.4rem;
+    left: 34px;
+    margin: 100px 250px;
+} */
+
+
+/* .card {
+    padding: 2rem;
+    border: 1px solid white;
+    width: 276px;
+    height: 304px;
+    /* background-color: aqua; */
+/* } */
+
+.heading {
+    text-align: center;
+    color: white;
+
+
+}
+
+.para {
+    text-align: center;
+    color: aqua;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
